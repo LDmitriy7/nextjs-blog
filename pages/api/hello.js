@@ -1,3 +1,3 @@
 export default function handler(req, res) {
-  res.json({text: 'Hello'})
+  res.json({text: 'Hello!'})
 }
