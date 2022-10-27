@@ -3,11 +3,17 @@ import Head from "next/head";
 import Image from "next/image";
 import utilStyles from "../styles/utils.module.css"
 import Link from "next/link";
+import React from "react";
 
 const name = 'Dmitriy';
 export const siteTitle = 'Next.js Sample Website';
 
-const Layout = ({children, home}) => (
+type props = {
+  children: React.ReactNode,
+  home?: boolean,
+}
+
+export default ({children, home}: props) => (
   <div className={styles.container}>
     <Head>
       <link rel="icon" href="/favicon.ico"/>
@@ -66,5 +72,3 @@ const Layout = ({children, home}) => (
     )}
   </div>
 )
-
-export default Layout
